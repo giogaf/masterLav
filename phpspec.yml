@@ -1,0 +1,3 @@
+suites:
+    my_suite:
+        spec_prefix: tests
