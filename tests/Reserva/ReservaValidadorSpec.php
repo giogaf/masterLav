@@ -1,7 +1,8 @@
 <?php
 
 namespace tests\App\Reserva;
-
+use App\User;
+use App\Reserva\Habitacion;
 use App\Reserva\ReservaValidador;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -25,7 +26,7 @@ class ReservaValidadorSpec extends ObjectBehavior
     	$fecha_fin = '2016-06-06';
     	$this->shouldThrow('\InvalidArgumentException')->duringValidar($fecha_inicio, $fecha_fin, $habitacion);
     }
-    public function its_no_reserva_mayor_quince_dias($fecha_inicio, $fecha_fin, User $usuario, Room $habitacion)
+    public function its_no_reserva_mayor_quince_dias($fecha_inicio, $fecha_fin, User $usuario, Habitacion $habitacion)
     {
     	$fecha_inicio = '2016-06-1';
     	$fecha_fin = '2016-06-15';

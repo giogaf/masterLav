@@ -58,4 +58,9 @@ class ReservaValidador
 	{
 		return $this->belongsToMany('App\Reserva\Habitacion')->withTimestamps();
 	}
+
+    public function nuevo($argument1, $argument2, $argument3, $argument4)
+    {
+        throw new \InvalidArgumentException('edicion pendiente para excepcion metodo  nuevo()');
+    }
 }
